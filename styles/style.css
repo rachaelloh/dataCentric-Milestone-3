@@ -1,0 +1,15 @@
+body {
+    background-image: url("/images/foodonwood.jpg");
+    background-size: cover;
+    height: 100%;
+    margin: 0;
+}
+
+#footer{
+    line-height: 25px;
+    font-size: 1.5em;
+    text-align: left;
+    font-family: 'Dancing Script', sans-serif;
+    background-color:grey;
+    color:white;
+  }
