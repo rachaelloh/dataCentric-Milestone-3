@@ -17,7 +17,14 @@ def get_recipes():
     return render_template("recipes.html", 
                            recipes=mongo.db.recipes.find())
                            
+    form = FilterForm()
+    if request.method == "POST":
+        return redirect(url_for('get_recipes', cuisine=form.cuisine.data))
+    return render_template("recipes.html",
+        recipes=result, form=form)                           
                            
+                           
+
                            
 # "magic code" -- boilerplate
 if __name__ == '__main__':

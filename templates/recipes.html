@@ -5,7 +5,15 @@
     <div class="col-sm-12">
         <h1>All Recipes</h1>
         
-        
+        <form novalidate class="selectCuisine" action=" " method= "POST"> 
+            {{ form.cuisine(class="col s5 m4") }}
+            <button class="btn-large waves-effect waves-light col s12 m3 filter-btn" type="submit" name="action">Filter Recipe
+                <i class="material-icons right">filter_list</i>
+            </button>
+            
+        </form>
     </div>
     
 </div>
+
+{% endblock %}
