@@ -8,6 +8,7 @@ from selectCuisine import AddForm, FilterForm
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'the random string'
+app.config['IMAGES_FOLDER'] = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static/images/') #to store images
 app.config["MONGO_DBNAME"] = 'DataCentricMilestone3'
 app.config["MONGO_URI"] = "mongodb+srv://root:r00tUser@cluster0-jhmsx.mongodb.net/DataCentricMilestone3?retryWrites=true"
 
