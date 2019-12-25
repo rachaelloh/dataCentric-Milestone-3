@@ -3,8 +3,11 @@ import os
 from flask_pymongo import PyMongo
 import re
 from bson.objectid import ObjectId
+from selectCuisine import AddForm, FilterForm
+
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'the random string'
 app.config["MONGO_DBNAME"] = 'DataCentricMilestone3'
 app.config["MONGO_URI"] = "mongodb+srv://root:r00tUser@cluster0-jhmsx.mongodb.net/DataCentricMilestone3?retryWrites=true"
 
@@ -31,7 +34,7 @@ def get_recipes():
 
         result = []
         for recipe in recipes:
-            recipe_ = dict(cuisine=recipe['cuisine'], recipe=recipe['recipe'], allergens=recipe['allergens'], ingredients=recipe['ingredients'],
+            recipe_ = dict(cuisine=recipe['cuisine'], recipe=recipe['recipe'], ingredients=recipe['ingredients'],
             methods=recipe['methods'], image=recipe.get('image'), _id=recipe['_id'])
             result.append(recipe_)
     else:
