@@ -1,13 +1,13 @@
 from flask_wtf import FlaskForm
 from wtforms import validators, ValidationError
 from wtforms.validators import DataRequired
-from wtforms import TextField, TextAreaField, SubmitField, FileField, SelectField
+from wtforms import FileField, TextAreaField, TextField, SelectField, SubmitField 
 
 
 
 class AddForm(FlaskForm):
     cuisine = SelectField("Cuisine Name",
-                                    choices = [('', 'Select a Cuisine'), 
+                                    choices = [('', 'Select Cuisine'), 
                                     ('it', 'Italian Cuisine'),
                                     ('ch', 'Chinese Cuisine'), 
                                     ('jp', 'Japanese Cuisine'), 
@@ -25,7 +25,7 @@ class AddForm(FlaskForm):
             
 class FilterForm(FlaskForm):
     cuisine = SelectField("Cuisine Name",
-                                    choices = [('', 'Select a Cuisine'), 
+                                    choices = [('', 'Select Cuisine'), 
                                     ('it', 'Italian Cuisine'),
                                     ('ch', 'Chinese Cuisine'), 
                                     ('jp', 'Japanese Cuisine'), 

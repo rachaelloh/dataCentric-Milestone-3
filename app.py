@@ -17,8 +17,6 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_recipes')
 def get_recipes():
-    #return render_template("recipes.html", 
-                           #recipes=mongo.db.recipes.find())
                            
     cuisine = None
     cuisine_mapping = dict(it='Italian Cuisine', ch="Chinese Cuisine", jp="Japanese Cuisine", kr="Korean Cuisine")
@@ -29,9 +27,6 @@ def get_recipes():
         
     if cuisine :
         recipes = mongo.db.recipes.find({ '$or': dict(cuisine=cuisine) })
-         
-        # Passing result of args into filters
-        # And passing each matching _id into filters
 
         result = []
         for recipe in recipes:
