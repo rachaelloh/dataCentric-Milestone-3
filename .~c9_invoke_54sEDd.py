@@ -15,9 +15,14 @@ app.config["MONGO_URI"] = "mongodb+srv://root:r00tUser@cluster0-jhmsx.mongodb.ne
 mongo = PyMongo(app)
 
 @app.route('/')
-@app.route('/get_recipes')
+@app.route('/get_recipes', methods=["GET"])
 def get_recipes():
-    return render_template("recipes.html", recipe=mongo.db.recipe.find())
+    _cuisines = mongo.db.categories.find()
+    cuisines_list = [cuisines for cuisines in _cuisines]
+    recipes_c = mongo.db.recipe.count()
+    return render_template("recipes.html", cuisines = cuisines_list, recipes_c = recipes_c)
+
+
 
 
 @app.route('/add_recipes')
@@ -40,7 +45,7 @@ def edit_recipe(recipe_id):
 def view_recipe(recipe_id):
     the_recipe = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
     ingredients = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
-    cooking_steps = request.form['cooking_steps']
+    cooking_steps = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
     return render_template("view.html", recipe=the_recipe, ingredients=ingredients, cooking_steps=cooking_steps)
 
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
