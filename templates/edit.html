@@ -4,20 +4,24 @@
   <div class="wrapper">
 <h3>Edit Recipe</h3>
 <div class="row">
-    <form action="{{ url_for('update_recipe', recipe_id=recipe.id) }}" method="POST" class="col s12">
+    <form action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
         <div class="row">
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">restaurant</i>
-                    <select id="category" name="category_name">
-                  <option value="" disabled selected>Choose Category</option>
-                  {% for cat in categories %}
-                      <option value="{{cat.category_name}}">{{cat.category_name}}</option>
-                  {% endfor %}
+            <div class="input-field col s12">
+                <i class="material-icons prefix">restaurant</i>
+                <select id="category" name="category_name">
+                 <option value="" disabled selected>Choose Cuisine</option>
+                 {% for cat in categories %}
+                     {% if cat.category_name == recipe.category_name %}
+                     <option value="{{cat.category_name}}"selected >{{cat.category_name}}</option>
+                     {% else %}
+                     <option value="{{cat.category_name}}">{{cat.category_name}}</option>
+                    {% endif %}
+                 {% endfor %}
                 </select>
                     <label>Cuisine Category</label>
-                </div>
             </div>
+        </div>
+        <div class="row">    
             <div class="input-field col s12">
                 <i class="material-icons prefix">create</i>
                 <input id="recipe_name" name="recipe_name" type="text">
