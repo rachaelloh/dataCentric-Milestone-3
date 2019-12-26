@@ -1,20 +1,31 @@
 {% extends 'index.html'%} {% block content %}
-<div class="row">
-    <ul class="collapsible" data-collapsible="accordion">
-        {% for task in tasks %}
-        <li>
-            <div class="collapsible-header">
-                <div class="col s3">
-                    <i class="material-icons">expand_more</i>
-                    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small">Delete</a>
-                    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
-                    
-                </div>
-                
-        </li>
+
+<body>
+  <div class="wrapper">
+<h4>All Recipes</h4>
+
+ <table>
+        <thead>
+          <tr>
+              <th>Recipe Name</th>
+              <th>Cuisine</th>
+              
+              <th>Edit/Delete</th>
+          </tr>
+        </thead>
+{% for recipe in recipes %}
+        <tbody>
+          <tr>
+            <td>{{recipe.recipe_name}}</td>
+            <td>{{recipe.category_name}}</td>
+            
+            <td><a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small indigo lighten-2">Edit</a><a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small red">Delete</a></td>
+          </tr>
+
         {% endfor %}
+  
+        </tbody>
+</table>
+</body>
 
-    </ul>
-</div>
 {% endblock %}
-

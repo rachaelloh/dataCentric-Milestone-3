@@ -7,7 +7,7 @@ html, body {
 }
 
 .wrapper {
-  min-height: 100%;
+  padding-top: 10px;
 }
 
 .btn_small {
