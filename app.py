@@ -32,9 +32,14 @@ def insert_recipe():
     
 @app.route('/edit_recipe/<recipe_id>')
 def edit_recipe(recipe_id):
-    the_recipe =  mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    the_recipe =  mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
     all_categories =  mongo.db.categories.find()
     return render_template('edit.html', recipe=the_recipe, categories=all_categories)
+
+@app.route('/view_recipe/<recipe_id>', methods=["GET", "POST"])
+def view_recipe(recipe_id):
+    the_recipe = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
+    return render_template("viewrecipe.html", recipe = the_recipe)
 
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
@@ -52,6 +57,13 @@ def update_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipe.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('get_recipes'))
+    
+@app.route('/category_search', methods=['GET', 'POST'])
+def category_search():
+    search_term = []
+    if request.method == 'POST':
+        search_term = request.form['category_name']
+    return render_template('catSearch.html', the_recipe=mongo.db.recipe.find_one({"category_name": search_term}))
 
 
 if __name__ == '__main__':

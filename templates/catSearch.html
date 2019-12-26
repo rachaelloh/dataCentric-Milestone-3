@@ -1,0 +1,36 @@
+{% extends 'base.html'%} 
+{% block header %}
+
+<body>
+  <div class="wrapper">
+<h4>Search by Cuisine</h4>
+
+<div class="col-md-4">
+  <form method="POST" action="{{ url_for('category_search') }}" class="form-inline">
+    <input type="text" class="form-control" placeholder="Search Recipe By Category" name="category_name" id="category_name" autofocus>
+    <button class="btn btn-danger indigo lighten-2">search</button>
+  </form>
+</div>
+
+
+<table>
+        <thead>
+          <tr>
+              <th>Recipe Name</th>
+              <th>Cuisine</th>
+              
+              <th>Edit/Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{recipe.recipe_name}}</td>
+            <td>{{recipe.category_name}}</td>
+            
+            <td><a href="{{url_for('edit_recipe', recipe_id=the_recipe._id)}}" class="waves-effect waves-light btn btn_small indigo lighten-2">Edit</a><a href="{{url_for('delete_recipe', recipe_id=the_recipe._id)}}" class="waves-effect waves-light btn btn_small red lighten-2">Delete</a></td>
+            <td><a href="{{url_for('view_recipe', recipe_id=the_recipe._id)}}" class="waves-effect waves-light btn btn_small light-green lighten-1">View</a></td>
+          </tr>
+        </tbody>
+</table>
+     
+{% endblock %}
