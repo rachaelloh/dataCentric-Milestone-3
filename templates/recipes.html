@@ -1,19 +1,28 @@
-{% extends 'index.html' %} {% block content %} 
-
-
+{% extends 'index.html'%} {% block content %}
 <div class="row">
-    <div class="col-sm-12">
-        <h1>All Recipes</h1>
-        
-        <form novalidate class="selectCuisine" action=" " method= "POST"> 
-            {{ form.cuisine(class="col-xs-6 col-sm-6") }}
-            <button class="btn-large waves-effect waves-light col-xs-2 col-m-3 filter-btn" type="submit" name="action">Filter Recipe
-                <i class="material-icons right"></i>
-            </button>
-            
-        </form>
-    </div>
-    
-</div>
+    <ul class="collapsible" data-collapsible="accordion">
+        {% for task in tasks %}
+        <li>
+            <div class="collapsible-header">
+                <div class="col s3">
+                    <i class="material-icons">expand_more</i>
+                    <a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small">Delete</a>
+                    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                    
+                </div>
+                <div class=" task_header col s9">
+                    <strong>{{task.task_name}}</strong> - {{task.due_date}}
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <span>
+                {{task.task_description}} 
+            </span>
+            </div>
+        </li>
+        {% endfor %}
 
+    </ul>
+</div>
 {% endblock %}
+

@@ -1,7 +1,7 @@
-{% extends 'base.html' %} {% block content %}
-<h3>Add Task</h3>
+{% extends 'index.html' %} {% block content %}
+<h3>Add Recipe</h3>
 <div class="row">
-    <form action="{{ url_for('insert_task') }}" method="POST"  class="col s12">
+    <form action="{{ url_for('insert_recipe') }}" method="POST"  class="col s12">
         <div class="row">
             <div class="row">
                 <div class="input-field col s12">
@@ -12,7 +12,7 @@
                       <option value="{{cat.category_name}}">{{cat.category_name}}</option>
                   {% endfor %}
                 </select>
-                    <label>Task Category</label>
+                    <label>Cuisine Category</label>
                 </div>
             </div>
             <div class="input-field col s12">
