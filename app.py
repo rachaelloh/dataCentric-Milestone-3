@@ -40,7 +40,7 @@ def edit_recipe(recipe_id):
 def view_recipe(recipe_id):
     the_recipe = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
     ingredients = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
-    cooking_steps = request.form['cooking_steps']
+    cooking_steps = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
     return render_template("view.html", recipe=the_recipe, ingredients=ingredients, cooking_steps=cooking_steps)
 
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])

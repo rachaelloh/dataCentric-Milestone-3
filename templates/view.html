@@ -9,21 +9,21 @@
             {% for recipe in recipe %} 
             
 
-            <li class="recipe_name"> Recipe Name: <span>{{recipe.the_recipe}}</span> </li>
+            <li class="recipe_name"> Recipe Name: <span>{{recipe.recipe_name}}</span> </li>
 
             <li class="ingredients">
                 Ingredients:
                 <ol>
-                    {% for ingredients in recipe.ingredients %}
-                    <li><span> {{ingredients}} </span></li>
+                    {% for ingredients in ingredients %}
+                    <li><span> {{recipe.ingredients}} </span></li>
                     {% endfor %}
                 </ol>
             </li>
             <li class="cooking_steps">
-                Methods:
+                Cooking Steps:
                 <ol>
-                    {% for steps in recipe.cooking_steps %}
-                    <li><span> {{cooking_steps}} </span></li>
+                    {% for steps in cooking_steps %}
+                    <li><span> {{recipe.cooking_steps}} </span></li>
                     {% endfor %}
                 </ol>
             </li>
