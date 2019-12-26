@@ -1,0 +1,41 @@
+{% extends 'index.html'%} {% block content %} 
+
+<h2>View Recipe</h2>
+<div class="row">
+    <div class="col s12 m12 l12">
+
+        <ul>
+
+            {% for recipe in recipe %} 
+            
+
+            <li class="recipe_name"> Recipe Name: <span>{{recipe.the_recipe}}</span> </li>
+
+            <li class="ingredients">
+                Ingredients:
+                <ol>
+                    {% for ingredients in recipe.ingredients %}
+                    <li><span> {{ingredients}} </span></li>
+                    {% endfor %}
+                </ol>
+            </li>
+            <li class="cooking_steps">
+                Methods:
+                <ol>
+                    {% for steps in recipe.cooking_steps %}
+                    <li><span> {{cooking_steps}} </span></li>
+                    {% endfor %}
+                </ol>
+            </li>
+
+
+
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+  
+
+
+{% endblock %}
