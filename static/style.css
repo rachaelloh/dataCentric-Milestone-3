@@ -30,6 +30,16 @@ html, body {
     padding: 10px;
 }
 
+.btn-large{
+    padding: 0px 10px 0px 10px;
+    background-color: #9a2c0b;
+    margin-bottom: 10px;
+    -moz-border-radius: 5px 10px 5px 10px;
+    -webkit-border-radius: 5px 10px 5px 10px;
+    -o-border-radius: 5px 10px 5px 10px;
+    border-radius:5px 10px 5px 10px;
+    
+}
 
 #footer {
     line-height: 25px;

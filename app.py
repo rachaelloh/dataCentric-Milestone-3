@@ -17,35 +17,16 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/get_recipes')
 def get_recipes():
-                           
-    cuisine = None
-    cuisine_mapping = dict(it='Italian Cuisine', ch="Chinese Cuisine", jp="Japanese Cuisine", kr="Korean Cuisine")
+    return render_template("recipes.html", 
+                           recipes=mongo.db.recipes.find())
 
-    if request.args.get('cuisine'):
-        cuisine = cuisine_mapping.get(request.args.get('cuisine'))
 
-        
-    if cuisine :
-        recipes = mongo.db.recipes.find({ '$or': dict(cuisine=cuisine) })
+@app.route('/add_recipes')
+def add_recipes():
+    return render_template('add.html',
+                           categories=mongo.db.categories.find())
 
-        result = []
-        for recipe in recipes:
-            recipe_ = dict(cuisine=recipe['cuisine'], recipe=recipe['recipe'], ingredients=recipe['ingredients'],
-            methods=recipe['methods'], image=recipe.get('image'), _id=recipe['_id'])
-            result.append(recipe_)
-    else:
-        result=mongo.db.recipes.find()
-    
-    
-    form = FilterForm()
-    if request.method == "POST":
-        return redirect(url_for('get_recipes', cuisine=form.cuisine.data))
-    return render_template("recipes.html", recipes=result, form=form)                           
-                           
-                           
 
-                           
-# "magic code" -- boilerplate
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
