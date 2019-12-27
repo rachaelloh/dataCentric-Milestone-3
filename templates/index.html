@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/style.css" type="text/css" />
-
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
  
@@ -60,6 +61,11 @@
      onCloseEnd: function () {
           console.log("same");
       } 
+  });
+</script>
+<script type="text/javascript" 
+  $(document).ready(function(){
+    $('select').formSelect();
   });
 </script>
 
