@@ -1,7 +1,6 @@
 {% extends 'index.html' %} {% block content %}
   
- <body>
-  <div class="wrapper">
+<div class="wrapper">
 <h3>Add Recipe</h3>
 <div class="row">
     <form action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
@@ -46,6 +45,5 @@
         </div>
     </form>
 </div>
-</body>
 
 {% endblock %}

@@ -20,7 +20,7 @@
     <header>
     <nav class="navbar fixed-top navbar-expand-lg navbar-light pt-0 pb-0" style="background-color: #FFE5E7
 ;">
-      <a class="navbar-brand" href="index.html">RECIPE SHARING</a>
+      <a class="navbar-brand" href="{{ url_for('get_recipes') }}">RECIPE SHARING</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,10 +31,10 @@
       </li>
       
       <li class="nav-item active">
-        <a class="nav-link" href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+        <a class="nav-link" href="{{ url_for('get_recipes') }}"><i class="fa fa-fw fa-home"></i>Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="add.html"><i class="fa fa-plus-circle"></i> Add Recipe</a>
+        <a class="nav-link" href="{{ url_for('add_recipes') }}"><i class="fa fa-plus-circle"></i> Add Recipe</a>
       </li>
     </ul>
   </div>
