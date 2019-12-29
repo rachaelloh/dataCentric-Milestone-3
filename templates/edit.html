@@ -23,27 +23,27 @@
         <div class="row">    
             <div class="input-field col s12">
                 <i class="material-icons prefix">create</i>
-                <input id="recipe_name" name="recipe_name" type="text">
+                <input id="recipe_name" name="recipe_name" type="text" value="{{recipe.recipe_name}}">
                 <label for="icon_prefix">Recipe Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">room_service</i>
-                <textarea id="ingredients" name="ingredients" class="materialize-textarea"></textarea>
+                <textarea id="ingredients" name="ingredients" class="materialize-textarea">{{recipe.ingredients}}</textarea>
                 <label for="icon_telephone">Ingredients</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
                 <i class="material-icons prefix">restaurant_menu</i>
-                <textarea name="cooking_steps" id="cooking_steps" class="materialize-textarea"></textarea>
+                <textarea name="cooking_steps" id="cooking_steps" class="materialize-textarea">{{recipe.cooking_steps}}</textarea>
                 <label for="icon_telephone">Cooking Steps</label>
             </div>
         </div>
     
         <div class="row">
-            <button class="btn waves-effect waves-light" type="submit" name="action">Add Recipe
+            <button class="btn waves-effect waves-light" type="submit" name="action">Edit Recipe
                 <i class="material-icons right">add_circle_outline</i>
              </button>
         </div>
@@ -51,3 +51,5 @@
 </div>
 
 {% endblock %}
+
+
