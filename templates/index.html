@@ -16,17 +16,17 @@
  
  <header>
  <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper cyan lighten-2">
       <a href="{{ url_for('get_recipes') }}" class="brand-logo">RECIPE SHARING</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="catSearch.html"><i class="material-icons left">view_list</i>Search by Cuisine</a></li>
+        <li><a href="{{ url_for('category_search') }}"><i class="material-icons left">view_list</i>Search by Cuisine</a></li>
         <li><a href="{{ url_for('get_recipes') }}"><i class="material-icons left">home</i>All Recipes</a></li>
         <li><a href="{{ url_for('add_recipes') }}"><i class="material-icons left">add</i>Add Recipe</a></li>
       </ul>
 
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="catSearch.html"><i class="material-icons left">view_list</i>Search by Cuisine</a></li>
+      <ul class="side-nav cyan lighten-5" id="mobile-demo">
+        <li><a href="{{ url_for('category_search') }}"><i class="material-icons left">view_list</i>Search by Cuisine</a></li>
         <li><a href="{{ url_for('get_recipes') }}"><i class="material-icons left">home</i>All Recipes</a></li>
         <li><a href="{{ url_for('add_recipes') }}"><i class="material-icons left">add</i>Add Recipe</a></li>
       </ul> 
@@ -38,6 +38,17 @@
 
 {% endblock %}
 
+<footer >
+    <div class="page-footer cyan lighten-2">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 m12 l12 center">
+          © 2019 Rachael Loh
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
 <!--FOOTER STARTS HERE
 <footer class="page-footer font-small">
   <span class="footer-copyright text-center py-3" id="footer">© 2019 Rachael Loh</span>

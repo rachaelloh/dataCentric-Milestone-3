@@ -1,14 +1,13 @@
 {% extends 'index.html'%} 
 {% block header %}
 
-<body>
   <div class="wrapper">
 <h4>Search by Cuisine</h4>
 
 <div class="col-md-4">
   <form method="POST" action="{{ url_for('category_search') }}" class="form-inline">
-    <input type="text" class="form-control" placeholder="Search Recipe By Category" name="category_name" id="category_name" autofocus>
-    <button class="btn btn-danger indigo lighten-2">search</button>
+    <input type="text" class="form-control" placeholder="Search Recipe By Cuisine" name="category_name" id="category_name" autofocus>
+    <button class="btn btn-danger cyan lighten-3">SEARCH</button>
   </form>
 </div>
 
