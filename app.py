@@ -58,12 +58,11 @@ def delete_recipe(recipe_id):
     return redirect(url_for('get_recipes'))
     
 @app.route('/category_search', methods=['GET', 'POST'])
-def category_search():
+def category_search(): 
     search_term = []
     if request.method == 'POST':
         search_term = request.form['category_name']
     return render_template('catSearch.html', the_recipe=mongo.db.recipe.find_one({"category_name": search_term}))
-
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
