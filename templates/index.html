@@ -15,8 +15,8 @@
  
  <header>
  <nav>
-    <div class="nav-wrapper cyan lighten-2">
-      <a href="{{ url_for('get_recipes') }}" class="brand-logo">RECIPE SHARING</a>
+    <div class="nav-wrapper">
+      <a href="{{ url_for('get_recipes') }}" class="brand-logo col s6">RECIPE SHARING</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="{{ url_for('category_search') }}"><i class="material-icons left">view_list</i>Search by Cuisine</a></li>
@@ -24,7 +24,7 @@
         <li><a href="{{ url_for('add_recipes') }}"><i class="material-icons left">add</i>Add Recipe</a></li>
       </ul>
 
-      <ul class="side-nav cyan lighten-5" id="mobile-demo">
+      <ul class="side-nav red lighten-3" id="mobile-demo">
         <li><a href="{{ url_for('category_search') }}"><i class="material-icons left">view_list</i>Search by Cuisine</a></li>
         <li><a href="{{ url_for('get_recipes') }}"><i class="material-icons left">home</i>All Recipes</a></li>
         <li><a href="{{ url_for('add_recipes') }}"><i class="material-icons left">add</i>Add Recipe</a></li>
