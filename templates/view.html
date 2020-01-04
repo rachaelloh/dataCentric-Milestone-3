@@ -16,7 +16,7 @@
             <li class="ingredients">
                 Ingredients:
                 <ol>
-                    {% for i in recipe.ingredients.split("\n") %}
+                    {% for i in recipe.ingredients.split(";") %}
                     <li><span> {{i}} </span></li>
                     {% endfor %}
                 </ol>
