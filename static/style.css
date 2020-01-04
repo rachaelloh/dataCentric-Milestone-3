@@ -56,6 +56,13 @@ h4 {
 
 /*view page*/
 
+ul , ol {
+    color: white;
+    font-family: Overlock, sans-serif;
+    font-size: large;
+    font-weight: 500;
+}
+
 .recipe_name, 
 .cuisine,
 .ingredients,
@@ -66,14 +73,17 @@ h4 {
     color: red;
 }
 
-.recipe-name span, 
-.country-name span,
-.allergen-type span,
-.ingredient-list span,
-.method-list span{
+.recipe_name span, 
+.cuisine span,
+.ingredients span,
+.cooking_steps span{
     text-transform: capitalize;
     color: #fafafa;
     
+}
+
+#ing li {
+    list-style: square !important;
 }
 
 .page-footer {
