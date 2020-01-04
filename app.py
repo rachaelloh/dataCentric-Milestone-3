@@ -3,6 +3,7 @@ import os
 from flask_pymongo import PyMongo
 import re
 from bson.objectid import ObjectId
+import bson
 
 
 app = Flask(__name__)
@@ -36,9 +37,9 @@ def edit_recipe(recipe_id):
 @app.route('/view_recipe/<recipe_id>', methods=["GET", "POST"])
 def view_recipe(recipe_id):
     the_recipe = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
-    ingredients = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
-    cooking_steps = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
-    return render_template("view.html", recipe=the_recipe, ingredients=ingredients, cooking_steps=cooking_steps)
+    # ingredients = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
+    # cooking_steps = mongo.db.recipe.find({"_id": ObjectId(recipe_id)})
+    return render_template("view.html", recipe=the_recipe)
 
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
@@ -59,10 +60,18 @@ def delete_recipe(recipe_id):
     
 @app.route('/category_search', methods=['GET', 'POST'])
 def category_search(): 
-    search_term = []
+    search_term = ''
     if request.method == 'POST':
-        search_term = request.form['category_name']
-    return render_template('catSearch.html', the_recipe=mongo.db.recipe.find_one({"category_name": search_term}))
+        search_term = r"{}".format(request.form['category_name'])
+       
+        the_recipe=mongo.db.recipe.find({"category_name": {
+            "$regex":search_term, "$options":"i"
+        }})
+     
+    else: 
+        the_recipe = mongo.db.recipe.find()
+    # print(list(the_recipe))
+    return render_template('catSearch.html', the_recipe=the_recipe)
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
