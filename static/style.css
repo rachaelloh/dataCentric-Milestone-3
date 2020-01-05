@@ -1,18 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Shadows+Into+Light&display=swap');
 
 /*Nav bar and brand-logo*/
 
 
 nav .brand-logo {
     color: white;
-    font-family: Overlock, sans-serif;
+    font-family: Shadows Into Light, sans-serif;
     font-size: 30px;
     font-weight: 600;
     
 }
 
+.side-nav {
+    padding-left: 0 !important;
+    padding-top: 20px;
+}
+
 nav ul a {
-    font-family: Overlock, sans-serif;
+    font-family: Shadows Into Light, sans-serif;
     font-size:15px;
     font-weight: 400;
 }
@@ -37,14 +42,14 @@ h3 {
     color: red;
     text-transform: uppercase; 
     text-align: center;
-    font-family: Overlock;
+    font-family: Shadows Into Light, sans-serif;
     font-weight: 600;
 }
 
 h4 {
     color: red;
     text-transform: uppercase; 
-    font-family: Overlock;
+    font-family: Shadows Into Light, sans-serif;
     font-weight: 600;
 }
 
@@ -58,9 +63,8 @@ h4 {
 
 ul , ol {
     color: white;
-    font-family: Overlock, sans-serif;
-    font-size: large;
-    font-weight: 500;
+    font-family: Shadows Into Light, sans-serif;
+    font-size: 25px;
 }
 
 .recipe_name, 
@@ -68,9 +72,9 @@ ul , ol {
 .ingredients,
 .cooking_steps {
     font-size: 22px;
-    font-weight: 500;
     text-transform: uppercase;
     color: red;
+    font-size: 30px;
 }
 
 .recipe_name span, 
