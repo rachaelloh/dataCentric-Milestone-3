@@ -82,9 +82,17 @@ ul , ol {
     
 }
 
+/*to overwrite styles in materialize css- in view recipe*/
+
 #ing li {
     list-style: square !important;
 }
+
+ul:not(.browser-default) {
+    padding-left: 50px;
+}
+
+/*footer*/
 
 .page-footer {
     padding-bottom: 1px;
