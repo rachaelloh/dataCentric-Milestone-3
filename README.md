@@ -94,6 +94,20 @@ During the testing process, I found out that:
 
 (ii) Test Cases
 
+| Test Case(s)      | Test Description   | Outcome | 
+| :------------- |:-------------| :-------------| 
+| 1    | Users will see all recipes at the landing page. | Pass|
+| 2    | If on mobile, users will see a navbar on top with a hamburger on the left and the brand logo 'Recipe Sharing' in the middle. | Pass|
+| 3    | When users click on hamburger, they will see 3 links 'Search by Cuisine', 'All Recipes', and 'Add Recipe', on top of one another| Pass|
+| 4    | If on web browser on laptop/desktop, users will see a navbar on top with the brand logo on the left and the other 3 links 'Search by Cuisine', 'All Recipes', and 'Add Recipe' on the right side. | Pass|
+| 5    | At the landing page, when users click on the edit button, they will be able to edit and update the recipe that they selected. | Pass|
+| 6    | At the landing page, when users click on the delete button, they will be able delete the selected recipe. | Pass|
+| 7    | At the landing page, when users click on the view button, they will be able to see the details of the recipe that they have selected where the ingredients appear as an unordered list and the cooking steps appear as an ordered list. | Pass|
+| 8    | When users click on the 'Search by Cuisine' button on the navbar, they will be able to see a search bar and the list of recipes below. | Pass|
+| 9    | When users search for the cuisine that they want, relevant results will appear below. | Pass|
+| 10   | When users click on the 'All Recipes' button and the brand logo 'Recipe Sharing', it will direct them to the main/landing page. | Pass|
+| 11   | When users click on the 'Add Recipe' button, they will see a form where they can choose a cuisine category by clicking on the dropdown button, add their recipe name, the ingredients and the cooking steps. After adding, the recipe will be shown in the All Recipes page. | Pass|
+
 
 ## Technologies Used
 
