@@ -11,29 +11,25 @@ I chose to do recipe sharing as I enjoy cooking and wish to share my personal re
 ## Demo
 
 
-## UX/UI
-### Project Strategy
+## UX
 | User Stories        | Description   |  
 | :------------- |:-------------| 
 | 1    | As someone who enjoys cooking, I want to share my recipes with like-minded people so that they can whips dishes that they also like.|
 | 2    | As a person who does not know much about cooking, I want to have access to various recipes so that I have the steps for recipes that may interest me.|
-| 3    | As a general user, I wish that there are such recipe sharing platforms so that I can use them so whenever I need. |
+| 3    | As a general user, I wish that there are such recipe sharing platforms so that I can use them whenever I need. |
 
 
-### Project Scope
-<!--The website will be designed based on the identified goals and hence placed in the following sections in a main page:-->
+The website will be designed based on the identified goals and hence allow users to do the following:
 
-<!--Search Bar: This will allow users to search for a specific title/keyword of movies where the list of movies will appear on the first row (which is at the Default Movies Row). Search results are not limited to a region.-->
+-add new recipes to the website where they can include the cuisines, the recipe name, the ingredients, and the cooking steps.
 
-<!--Default Movies Row: The first row of the page displays a list of preset movies in relation to a keyword, which in this case it is preset to the keyword ‘Avengers’. Users will be able to see the videos/trailers upon clicking on the particular movie that they want. When users search for movies, the results will also appear in this row. -->
+-edit any recipe on the website.
 
-<!--Top Rated Movies Row: This row will display about 20 Top Rated Movies. Users will be able to see the videos/trailers when they click on the movie. This is specified to a region with an added parameter which I have set to SG (Singapore).-->
+-view details of the individual recipes
 
-<!--Popular Movies Row: This row will display about 20 Popular Movies. Users will be able to see the videos/trailers when they click on the movie. This is specified to a region with an added parameter which I have set to SG (Singapore).-->
+-delete any recipe.
 
-<!--Upcoming Movies Row: This row will display about 20 Upcoming Movies. Users will be able to see the videos/trailers when they click on the movie. This is specified to a region with an added parameter which I have set to SG (Singapore).-->
-
-<!--Now Playing Row: This row will display about 20 movies that are Now Playing. Users will be able to see the videos/trailers when they click on the movie. This is specified to a region with an added parameter which I have set to SG (Singapore).-->
+-search recipe by cuisines.
 
 
 (i) Wireframes
@@ -41,13 +37,18 @@ I chose to do recipe sharing as I enjoy cooking and wish to share my personal re
 
 ## Project Skeleton - Features
 
-
 **Existing Features**
+
+
+The main/landing page shows all the recipes that are in the database where users can edit, delete, and view individual recipes.
+
 
 
 **Feature(s) for Future Implementation**
 
 Implement sign in feature for users such that only signed in users can share recipes and only delete their own recipes.
+
+The ability to upload images for individual recipes.
 
 
 ## Testing (Manual)
