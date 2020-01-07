@@ -113,6 +113,8 @@ ul:not(.browser-default) {
     font-weight: 500;
 }
 
+/*media queries*/
+
 @media screen and (max-width: 375px) {
   nav .brand-logo {
     font-size: 20px;
@@ -124,13 +126,3 @@ ul:not(.browser-default) {
     padding-left: 40px;
   }
 }
-
-/*@media only screen and (max-width: 767px) {*/
-/*      .btn-xl {*/
-/*          font-size: 0.8rem;*/
-/*          padding: 1rem 2rem;*/
-/*      }*/
-/*      .logo {*/
-/*          height: 50px;*/
-/*      }*/
-/*  }*/

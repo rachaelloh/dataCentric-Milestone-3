@@ -64,8 +64,6 @@ The edit button will bring user to the edit recipe page where they can edit the 
 The delete button will delete the recipe that is 
 
 
-
-
 **Feature(s) for Future Implementation**
 
 Implement sign in feature for users such that only signed in users can share recipes and only delete their own recipes.
@@ -76,6 +74,22 @@ The ability to upload images for individual recipes.
 ## Testing (Manual)
 
 (i) Mobile Responsiveness
+
+The website has been tested on **Macbook Air/iPad Mini/iPad/iPhone XS/iPhone 6/ Sony Xperia** which covers various screen-size. The browsers used for testings are Google Chrome & Apple Safari.
+
+During the testing process, I found out that:
+
+-On devices such as iPhone X or smaller screen sizes, the brand logo 'Recipe Sharing' overspills to the next line. Hence I added media query such that from screen sizes of iPhone X and below, the font size will decrease.
+
+-Search results will not be shown if I did not type in the exact cuisine name. Hence, the regular expression function has been used to make search function dynamic.
+
+-Ordered list was unable to display properly in the view recipe page. Hence, I used split to solve the problem and the steps is now able to be displayed in an ordered list.
+
+
+
+-The website is unable to work on the iPad Mini IOS9.3.5 and iPad IOS9.3.5.
+
+-The website worked on iPhone 6 IOS12.1.2, iPhone XS IOS13.1.3, iPad  6th  generation IOS12.4.1, iPad Pro IOS13.1.3, and Sony Xperia Android 5.1.1 (Chrome).
 
 
 (ii) Test Cases
@@ -91,12 +105,13 @@ The ability to upload images for individual recipes.
 * [NoSQL-MongoDB](https://www.mongodb.com/)
 * [Materialize CSS- 0.100.2](http://archives.materializecss.com/0.100.2/)
 * [Google Fonts](https://fonts.google.com/)
+* [Heroku](https://www.heroku.com/)
 
 ## Deployment
 
 
 ## Credits
-
+pexel
 
 **This is for educational use only.**
 
