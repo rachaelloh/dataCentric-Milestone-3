@@ -39,8 +39,30 @@ The website will be designed based on the identified goals and hence allow users
 
 **Existing Features**
 
+-The Recipe Sharing logo on the top left side of the navbar links to the mainpage.
+
+-The Search by Cuisine button allows users to search for recipes by cuisines where it is designed to be case insensitive.
+
+-The All Recipes button allows users to see all the recipes available in the website that has been added by other users.
+
+-The Add Recipe button allows users to add recipe to the website.
+
+-Users can click on the edit button if they want to update or change details of specific recipes.
+
+-Users can click on the delete button if they want to remove a specific recipe from the website.
+
+-Users can click on the view button to see the details of the specific recipe where the ingredients will be returned as an unordered list and the cooking steps will be returned as an ordered list. Users will have to add semicolon after each steps to denote a separation of each step.
+
+
+
+The navbar includes a brand-logo on the left, followed by search recipe by cuisine, all recipes, and add recipe, on the right side of the navbar.
 
 The main/landing page shows all the recipes that are in the database where users can edit, delete, and view individual recipes.
+
+The edit button will bring user to the edit recipe page where they can edit the recipe.
+
+The delete button will delete the recipe that is 
+
 
 
 
