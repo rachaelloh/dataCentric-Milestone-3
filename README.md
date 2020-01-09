@@ -139,9 +139,13 @@ This repository can also be deployed locally by cloning the repository. This can
 
 ## Credits
 
-Website design/outlook was inspired by http://recipebook-project.herokuapp.com/
+1) Website design/outlook was inspired by http://recipebook-project.herokuapp.com/
 
-Background image was taken from [Pexels](https://www.pexels.com/)
+2) Background image was taken from [Pexels](https://www.pexels.com/)
+
+3) [Stack Overflow](https://stackoverflow.com/)
+
+4) [w3schools](www.w3schools.com)
 
 **This is for educational use only.**
 
