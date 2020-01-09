@@ -34,6 +34,7 @@ The website will be designed based on the identified goals and hence allow users
 
 (i) Wireframes
 
+[Wireframes DataCentric](https://drive.google.com/open?id=1UnhRookhnV4_G75Wt2_pGjqgzN7CFKan)
 
 ## Project Skeleton - Features
 
@@ -84,12 +85,6 @@ During the testing process, I found out that:
 -Search results will not be shown if I did not type in the exact cuisine name. Hence, the regular expression function has been used to make search function dynamic.
 
 -Ordered list was unable to display properly in the view recipe page. Hence, I used split to solve the problem and the steps is now able to be displayed in an ordered list.
-
-
-
--The website is unable to work on the iPad Mini IOS9.3.5 and iPad IOS9.3.5.
-
--The website worked on iPhone 6 IOS12.1.2, iPhone XS IOS13.1.3, iPad  6th  generation IOS12.4.1, iPad Pro IOS13.1.3, and Sony Xperia Android 5.1.1 (Chrome).
 
 
 (ii) Test Cases
