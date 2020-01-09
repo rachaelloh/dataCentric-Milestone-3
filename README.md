@@ -1,6 +1,5 @@
 # Recipe Sharing - Data-Centric-Milestone-3
 
-
 ## Introduction
 This project is developed with the intention for users to share their recipes with others. The main functions of this Recipe Sharing revolves around the 4 functionalities- Create, Read, Update, Delete.
 
@@ -8,13 +7,10 @@ Database was stored and retrieved from the backend (MongoDB).
 
 I chose to do recipe sharing as I enjoy cooking and wish to share my personal recipes with others. Likewise, I am also interested in other people's recipes and I can also try them out on my own.
 
-## Demo
-
-
 ## UX
 | User Stories        | Description   |  
 | :------------- |:-------------| 
-| 1    | As someone who enjoys cooking, I want to share my recipes with like-minded people so that they can whips dishes that they also like.|
+| 1    | As someone who enjoys cooking, I want to share my recipes with like-minded people so that they can whip up dishes that they also like.|
 | 2    | As a person who does not know much about cooking, I want to have access to various recipes so that I have the steps for recipes that may interest me.|
 | 3    | As a general user, I wish that there are such recipe sharing platforms so that I can use them whenever I need. |
 
@@ -25,7 +21,7 @@ The website will be designed based on the identified goals and hence allow users
 
 -edit any recipe on the website.
 
--view details of the individual recipes
+-view details of the individual recipes.
 
 -delete any recipe.
 
@@ -53,16 +49,6 @@ The website will be designed based on the identified goals and hence allow users
 -Users can click on the delete button if they want to remove a specific recipe from the website.
 
 -Users can click on the view button to see the details of the specific recipe where the ingredients will be returned as an unordered list and the cooking steps will be returned as an ordered list. Users will have to add semicolon after each steps to denote a separation of each step.
-
-
-
-The navbar includes a brand-logo on the left, followed by search recipe by cuisine, all recipes, and add recipe, on the right side of the navbar.
-
-The main/landing page shows all the recipes that are in the database where users can edit, delete, and view individual recipes.
-
-The edit button will bring user to the edit recipe page where they can edit the recipe.
-
-The delete button will delete the recipe that is 
 
 
 **Feature(s) for Future Implementation**
