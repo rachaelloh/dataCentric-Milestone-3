@@ -98,7 +98,7 @@ During the testing process, I found out that:
 | :------------- |:-------------| :-------------| 
 | 1    | Users will see all recipes at the landing page. | Pass|
 | 2    | If on mobile, users will see a navbar on top with a hamburger on the left and the brand logo 'Recipe Sharing' in the middle. | Pass|
-| 3    | When users click on hamburger, they will see 3 links 'Search by Cuisine', 'All Recipes', and 'Add Recipe', on top of one another| Pass|
+| 3    | When users click on the hamburger, they will see 3 links 'Search by Cuisine', 'All Recipes', and 'Add Recipe', on top of one another| Pass|
 | 4    | If on web browser on laptop/desktop, users will see a navbar on top with the brand logo on the left and the other 3 links 'Search by Cuisine', 'All Recipes', and 'Add Recipe' on the right side. | Pass|
 | 5    | At the landing page, when users click on the edit button, they will be able to edit and update the recipe that they selected. | Pass|
 | 6    | At the landing page, when users click on the delete button, they will be able delete the selected recipe. | Pass|
@@ -113,7 +113,7 @@ During the testing process, I found out that:
 
 * [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)/[jQuery](https://jquery.com/download/)
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)/[JQuery](https://jquery.com/download/)
 * [Python3](https://www.python.org/)
 * [Flask](https://pypi.org/project/Flask/)
 * [NoSQL-MongoDB](https://www.mongodb.com/)
@@ -122,10 +122,26 @@ During the testing process, I found out that:
 * [Heroku](https://www.heroku.com/)
 
 ## Deployment
+### GitHub Deployment
+
+My code was written using AWS Cloud9. AWS Cloud9 serves as the local repository which was then deployed to GitHub. Whenever a new commit is done to the master branch, the deployed site will be updated accordingly. 
+
+This repository can also be deployed locally by cloning the repository. This can be done by going to the main page of the repository to clone/download directly into the editor of choice by pasting git clone into terminal.
+
+### Heroku Deployment
+
+- Project was also deployed and hosted to heroku. Website can be found [here](https://lzq-recipe-share.herokuapp.com/)
+- Created Procfile and requirements.txt for dependencies.
+- Created new heroku app and set environment variables.
+- Linked Github and environment with Heroku.
+- Project was pushed to Heroku once in awhile to ensure that update features are working.
 
 
 ## Credits
-pexel
+
+Website design/outlook was inspired by http://recipebook-project.herokuapp.com/
+
+Background image was taken from [Pexels](https://www.pexels.com/)
 
 **This is for educational use only.**
 
